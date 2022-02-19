@@ -1,0 +1,28 @@
+ //继承
+ @import "juzhong-extends.less";
+
+ #wrap1 {
+     position: relative;
+     width: 300px;
+     height: 300px;
+     border: 1px solid;
+     margin: 0 auto;
+         //(.juzhong  all)可以把所有状态拿下来
+    //  .inner:extend(.juzhong all){  //把居中里的继承过来
+     //或者这样写
+     .inner {
+         &:extend(.juzhong all);
+         &:nth-child(1) {
+             width: 100px;
+             height: 100px;
+             background: pink;
+         }
+
+         &:nth-child(2) {
+             width: 50px;
+             height: 50px;
+             background: black;
+
+         }
+     }
+ }
